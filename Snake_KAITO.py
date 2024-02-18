@@ -159,7 +159,7 @@ class Hud:
 class App:
     def __init__(self):  #初期化
         pyxel.init(320, 272, title="KAITO18th", fps=60)
-        pyxel.load("/Users/Asuka/Snake_KAITO.pyxres")
+        pyxel.load("Snake_KAITO.pyxres")
         pyxel.mouse(True)
 
         self.current_game_state = GameState.GAME_TITLE
