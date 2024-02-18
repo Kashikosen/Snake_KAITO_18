@@ -1,5 +1,6 @@
 #描画ファイル名 Snake_KAITO.pyxres
 #呼び出す時は、 pyxel edit Snake_KAITO.pyxres
+#https://kitao.github.io/pyxel/wasm/launcher/?run=Kashikosen.Snake_KAITO_18.Snake_KAITO
 
 from cmath import pi
 import math
@@ -387,6 +388,7 @@ class App:
         pyxel.blt(288, 224, 0, 48, 64, 16, 16, 0)
         if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) and (288 <= pyxel.mouse_x <= 304) and (224 <= pyxel.mouse_y <= 240):
             print("GitHub")
+            webbrowser.open("https://github.com/Kashikosen/Snake_KAITO_18")
     
     #ゲームオーバー画面
     def draw_game_over(self):
@@ -407,7 +409,7 @@ class App:
         pyxel.text(176, 214, "Post your results?", 5)
         pyxel.blt(256, 208, 0, 32, 64, 16, 16, 0)
         if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) and (256 <= pyxel.mouse_x <= 272) and (208 <= pyxel.mouse_y <= 224):
-            result_link = "https://twitter.com/intent/tweet?text=%E7%A7%81%E3%81%AF{}%E5%80%8B%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B9%E3%82%92%E9%A3%9F%E3%81%B9%E3%81%BE%E3%81%97%E3%81%9F%0A%23KAITO%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B9%E3%82%A2%E3%83%84%E3%83%A1"
+            result_link = "https://twitter.com/intent/tweet?text=%E7%A7%81%E3%81%AF{}%E5%80%8B%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B9%E3%82%92Get%E3%81%97%E3%81%9F%E3%82%88!!%0A%23KAITO%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B9%E3%82%A2%E3%83%84%E3%83%A1%0A%0Ahttps%3A%2F%2Fkitao.github.io%2Fpyxel%2Fwasm%2Flauncher%2F%3Frun%3DKashikosen.Snake_KAITO_18.Snake_KAITO"
             result_score = self.score
             form_score = result_link.format(result_score)
             webbrowser.open(form_score)
